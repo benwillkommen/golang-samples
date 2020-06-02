@@ -11,8 +11,8 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-
-runtime: go
+service: tokens
+runtime: go1.12
 env: flex
 
 # This sample incurs costs to run on the App Engine flexible environment. 
