@@ -20,6 +20,8 @@ import (
 	"log"
 	"net/http"
 	"os"
+
+	"github.com/google/uuid"
 )
 
 func main() {
@@ -40,7 +42,8 @@ func handle(w http.ResponseWriter, r *http.Request) {
 		http.NotFound(w, r)
 		return
 	}
-	fmt.Fprint(w, "Hello world!")
+	myUUID := uuid.New()
+	fmt.Fprint(w, myUUID)
 }
 
 func healthCheckHandler(w http.ResponseWriter, r *http.Request) {
